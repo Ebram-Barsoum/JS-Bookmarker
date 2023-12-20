@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bookmark</title>
+
+    <!--Favicon image-->
+    <link rel="shortcut icon" href="images/3208709.png" type="image/x-icon">
+    <!--Google fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=PT+Sans+Caption:wght@400;700&family=Pacifico&family=Righteous&display=swap" rel="stylesheet"/>
+
+    <!--Fontawesome link-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
+
+    <!--Bootstrap file-->
+    <link rel="stylesheet" href="cssHub/bootstrap.min.css" />
+
+    <!--Css main file-->
+    <link rel="stylesheet" href="cssHub/style.css" />
+  </head>
+  <body>
+    <main class="py-5">
+      <div class="container">
+        <div class="row py-2 d-flex justify-content-center">
+          <h1 class="logo position-relative p-0">Bookmarker</h1>
+        </div>
+
+        <div class="row py-4">
+          <h2 class="title text-center fs-4 mb-4">
+            <i class="fa-solid fa-bookmark"></i>
+            Bookmark your favorite sites
+            <i class="fa-solid fa-bookmark"></i>
+          </h2>
+
+          <form action="" class="form px-lg-5">
+            <div class="container d-flex flex-column gap-4">
+              <div class="form-group">
+                <label for="site-name" class="mb-2 fs-5">
+                  <i class="fa-solid fa-book-bookmark"></i>
+                  <span class="fw-bold">Site Name</span>
+                </label>
+                <input type="text" id="site-name" class="form-control" placeholder="Bookmark Name" />
+                <div class=" invalid-feedback ">Site name must start with capital and have length in range [5-10] chars</div>
+              </div>
+
+              <div class="form-group">
+                <label for="site-url" class="mb-2 fs-5">
+                  <i class="fa-solid fa-link"></i>
+                  <span class="fw-bold">Site URL</span>
+                </label>
+                <input type="text" id="site-URL" class="form-control" placeholder="Website URL Ex: https://google.com" />
+                <div class=" invalid-feedback ">Invalid URL</div>
+              </div>
+
+              <button type="button" class="btn text-white align-self-center px-5 fw-bold" id="add-btn"> Save</button>
+            </div>
+          </form>
+        </div>
+
+        <div class="row mt-4 g-3 px-md-5 py-3 rounded-3 border" id="items">
+
+        </div>
+    </main>
+    <!--Bootstrap bundle file-->
+    <script src="jsHub/bootstrap.bundle.min.js"></script>
+
+    <!--Main js file-->
+    <script src="jsHub/app.js"></script>
+  </body>
+</html>

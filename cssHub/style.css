@@ -1,0 +1,191 @@
+/* Global || Variables */
+
+/* General || Styling */
+body {
+  font-family: "PT Sans Caption", sans-serif;
+  background-color: #bde0fe;
+}
+::selection {
+  background-color: #a2d2ff;
+  color: #352e28;
+}
+::-webkit-scrollbar{
+  width: 8px;
+}
+::-webkit-scrollbar-thumb{
+  background-color: #111 ;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+}
+
+/*********** Header || Part************/
+.logo {
+  font-family: "Pacifico", cursive;
+  width: fit-content;
+  font-size: 45px;
+}
+.logo::before {
+  content: "";
+  width: 100%;
+  height: 30%;
+
+  position: absolute;
+  left: 0;
+  bottom: 0;
+
+  background-color: #a2d2ff;
+  z-index: -1;
+
+  transition: 0.5s;
+  -webkit-transition: 0.5s;
+  -moz-transition: 0.5s;
+  -ms-transition: 0.5s;
+  -o-transition: 0.5s;
+}
+.logo:hover::before {
+  height: 60%;
+}
+
+/************* Form || Part **************/
+.container .row:nth-child(2) {
+  border: dashed #000;
+  border-width: 1px 0;
+}
+.title {
+  font-family: "Righteous", sans-serif;
+  background-image: linear-gradient(to right, #457b9d, #a2d2ff);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+input {
+  height: 40px;
+}
+input:focus {
+  border-color: #a2d2ff !important;
+  outline: 0 none !important;
+  box-shadow: 0 0 0 0.2rem #a2d2ff !important;
+}
+.is-valid:focus {
+  border-color: #2d6a36 !important;
+  outline: 0 none !important;
+  box-shadow: 0 0 0 0.2rem #4c956c61 !important;
+}
+.is-invalid:focus {
+  border-color: #dc3545 !important;
+  outline: 0 none !important;
+  box-shadow: 0 0 0 0.2rem #dc2e0261 !important;
+}
+form button {
+  width: fit-content;
+  background-color:#457b9d !important ;
+  transition: .5s;
+  -webkit-transition: .5s;
+  -moz-transition: .5s;
+  -ms-transition: .5s;
+  -o-transition: .5s;
+}
+form button:hover{
+  background-color:#457b9dc5 !important ;
+}
+
+/*************** Items || Part ***************/
+
+#items{
+  max-height: 50vh;
+  overflow: auto;
+  background: #fff !important ;
+}
+
+.content{
+  background-color: #a2d2ff !important;
+  color:#000 !important;
+}
+.bookmark-img {
+  transition: .5s;
+  -webkit-transition: .5s;
+  -moz-transition: .5s;
+  -ms-transition: .5s;
+  -o-transition: .5s;
+}
+.item:hover .bookmark-img {
+   transform: rotateY(360deg) scale(1.2);
+   -webkit-transform: rotateY(360deg) scale(1.2);
+   -moz-transform: rotateY(360deg) scale(1.2);
+   -ms-transform: rotateY(360deg) scale(1.2);
+   -o-transform: rotateY(360deg) scale(1.2);
+}
+.item:hover .visit{
+  animation-play-state: running;
+}
+.bookmark-img{
+  background-color: aliceblue !important;
+
+  height: 80px;
+  width: 80px;
+
+   font-family: "Pacifico", cursive;
+}
+
+.name{
+  font-family: "Righteous", sans-serif;
+}
+.visit{
+  color:#457b9d;
+  animation-name: vibrate;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+  animation-play-state: paused;
+}
+@keyframes vibrate{
+  0%{
+    transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+}
+10%{
+  transform: rotate(-30deg);
+  -webkit-transform: rotate(-30deg);
+  -moz-transform: rotate(-30deg);
+  -ms-transform: rotate(-30deg);
+  -o-transform: rotate(-30deg);
+}
+20%{
+  transform: rotate(30deg);
+  -webkit-transform: rotate(30deg);
+  -moz-transform: rotate(30deg);
+  -ms-transform: rotate(30deg);
+  -o-transform: rotate(30deg);
+}
+30%{
+  transform: rotate(-30deg);
+  -webkit-transform: rotate(-30deg);
+  -moz-transform: rotate(-30deg);
+  -ms-transform: rotate(-30deg);
+  -o-transform: rotate(-30deg);
+}
+40%{
+  transform: rotate(0deg);
+  -webkit-transform: rotate(0deg);
+  -moz-transform: rotate(0deg);
+  -ms-transform: rotate(0deg);
+  -o-transform: rotate(0deg);
+}
+100%{
+  transform: rotate(0deg);
+  -webkit-transform: rotate(0deg);
+  -moz-transform: rotate(0deg);
+  -ms-transform: rotate(0deg);
+  -o-transform: rotate(0deg);
+}
+}
+.delete-btn:hover{
+   color: rgba(255, 0, 0, 0.58) !important;
+}
