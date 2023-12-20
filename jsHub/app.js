@@ -98,7 +98,10 @@ urlInput.addEventListener('input', function () {
 });
 //retrieving data from local stroage
 function initialize() {
-    if (!window.localStorage.getItem("bookmarks")) return ;
+  if (!window.localStorage.getItem("bookmarks")) {
+    content.innerHTML = ` <div class="msg text-center fs-4">Thre Are No Sites Yet</div>`;
+    return;
+    }
 
     sites = JSON.parse(window.localStorage.getItem("bookmarks"));
     display_sites(sites);
