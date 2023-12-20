@@ -18,7 +18,12 @@ function clear_inputs() {
 }
 // handling adding sites
 function display_sites(list){
-    let sz = list.length;
+  let sz = list.length;
+  if (sz == 0) {
+    content.innerHTML = ` <div class="msg text-center fs-4">Thre Are No Sites Yet</div>`;
+    return;
+  }
+
     let items = '';
 
     for (let index = 0; index < sz; index++){
@@ -93,10 +98,9 @@ urlInput.addEventListener('input', function () {
 });
 //retrieving data from local stroage
 function initialize() {
-    if (!window.localStorage.getItem("bookmarks")) return;
+    if (!window.localStorage.getItem("bookmarks")) return ;
 
     sites = JSON.parse(window.localStorage.getItem("bookmarks"));
-
     display_sites(sites);
 }
 

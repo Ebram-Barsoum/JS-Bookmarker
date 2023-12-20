@@ -100,7 +100,9 @@ form button:hover{
   overflow: auto;
   background: #fff !important ;
 }
-
+.msg{
+  font-family: "Pacifico", cursive;
+}
 .content{
   background-color: #a2d2ff !important;
   color:#000 !important;
