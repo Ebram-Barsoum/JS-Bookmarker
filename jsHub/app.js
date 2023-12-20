@@ -1,4 +1,4 @@
-//window.localStorage.removeItem("bookmarks");
+window.localStorage.removeItem("bookmarks");
 let nameInput = document.getElementById('site-name');
 let urlInput = document.getElementById('site-URL');
 let addBtn = document.getElementById('add-btn');
@@ -20,7 +20,7 @@ function clear_inputs() {
 function display_sites(list){
   let sz = list.length;
   if (sz == 0) {
-    content.innerHTML = ` <div class="msg text-center fs-4">Thre Are No Sites Yet</div>`;
+    content.innerHTML = ` <div class="msg text-center fs-4">There Are No Sites Yet</div>`;
     return;
   }
 
@@ -99,7 +99,7 @@ urlInput.addEventListener('input', function () {
 //retrieving data from local stroage
 function initialize() {
   if (!window.localStorage.getItem("bookmarks")) {
-    content.innerHTML = ` <div class="msg text-center fs-4">Thre Are No Sites Yet</div>`;
+    content.innerHTML = ` <div class="msg text-center fs-4">There Are No Sites Yet</div>`;
     return;
     }
 
