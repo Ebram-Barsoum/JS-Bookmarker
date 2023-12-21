@@ -1,4 +1,3 @@
-window.localStorage.removeItem("bookmarks");
 let nameInput = document.getElementById('site-name');
 let urlInput = document.getElementById('site-URL');
 let addBtn = document.getElementById('add-btn');
@@ -96,6 +95,7 @@ urlInput.addEventListener('input', function () {
 
   validURL = validate_input(urlInput, urlRegEx);
 });
+
 //retrieving data from local stroage
 function initialize() {
   if (!window.localStorage.getItem("bookmarks")) {
