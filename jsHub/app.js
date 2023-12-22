@@ -25,7 +25,10 @@ function display_sites(list){
 
     let items = '';
 
-    for (let index = 0; index < sz; index++){
+  for (let index = 0; index < sz; index++){
+        let regEx = /^https:\/\//;
+        let url = sites[index].URL;
+    if (!regEx.test(url)) url = 'https://' + url;
         items += `
         <div class="item  col-md-6 col-lg-3  px-2">
         <div class="content  d-flex flex-column gap-2 rounded-3 text-center px-2 pt-3">
@@ -34,7 +37,7 @@ function display_sites(list){
           </div>
           <div class="name fs-5">${sites[index].name}</div>
           <div class="actions d-flex justify-content-between align-items-center">
-            <a href="${sites[index].URL}" class="fs-4 visit btn border-0" target="blank"><i class="fa-regular fa-eye"></i></a>
+            <a href="${url}" class="fs-4 visit btn border-0" target="blank"><i class="fa-regular fa-eye"></i></a>
             <button class="btn fs-4 border-0 delete-btn" onclick=delete_site(${index})><i class="fa-solid fa-trash"></i></button>
           </div>
         </div>
@@ -70,7 +73,7 @@ function delete_site(index) {
 }
 
 // validating inputs values
-let nameRegEx = /^[A-Z][a-zA-Z]{4,9}$/;
+let nameRegEx = /^[\w\w]{3,}$/;
 let urlRegEx = /^((http){0,1}?(s){0,1}?:\/\/){0,1}(www\.){0,1}?(\w+\.\w{2,5})$/;
 
 function validate_input(input,regEx) {
